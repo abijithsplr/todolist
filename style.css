@@ -1,0 +1,29 @@
+.bg{
+  background-color: rgba(230, 224, 224, 0.74);
+}
+.banner{
+  background-color: rgba(255, 255, 255, 0.80);
+  /* background-color:white; */
+  padding: 2em 2em 2em;
+ max-width: 600px;
+ height: 400px;
+  margin:5% auto 0;
+}
+h2{
+  text-align: center;
+}
+.logo{
+  font-family:'Times New Roman', Times, serif ;
+}
+.account{
+  border-radius: 50px;
+  margin: 0.5em 0.5em ;
+}
+#list{
+  margin: 2em 5em;
+  /* line-height: 1em; */
+  font-size: large;
+}
+.heading{
+  margin: 2em 5em;
+}
