@@ -1,15 +1,17 @@
+if (localStorage.getItem("isLogin") === 'false') {
+  location.replace('index.html');
+} 
 
 function ajax() {
-
+  document.getElementById("spin").classList.remove("visually-hidden");
   var xhttp = new XMLHttpRequest;
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var todo = JSON.parse(this.responseText);
-
+      document.getElementById("spin").classList.add("visually-hidden");
       var output = "";
-
       for (var i = 0; i < (todo).length; i++) {
-        output += "<p>" + todo[i].id + "  " + check(todo, i) + " " + todo[i].title + "</p>";
+        output += "<li>" + check(todo, i) + " " + todo[i].title + "</li>";
         (document.getElementById("list")).innerHTML = output;
 
       }
@@ -48,7 +50,7 @@ function count() {
   // console.log(c);
 
   // console.log(x.length);
-  
+
   var p = new Promise(function (resolve, reject) {
 
     if (c < 5) {
@@ -70,7 +72,8 @@ function count() {
 }
 
 function redirect() {
-  window.location.replace("index.html");
+  localStorage.setItem("isLogin", false);
+  location.replace("index.html");
 }
 
 
